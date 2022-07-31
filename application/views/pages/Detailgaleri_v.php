@@ -71,7 +71,7 @@
 
 			<div class="section-header">
 				<div class="section-headline text-center">
-					<h2 style="text-decoration: underline;"><span><?php echo $judul; ?></span></h2>
+					<h2 style="text-decoration: underline; text-transform: uppercase;"><span><?php echo $judul; ?></span></h2>
 				</div>
 			</div>
 

@@ -73,9 +73,9 @@
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12 contact">
             <div class="single-well-c">
-              <a href="#">
-                <h2 class="sec-head-c"><span><?php echo get_phrase('Hubungi Kami') ?></span></h2>
-              </a>
+              <div class="section-headline text-center mb-4">
+                <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Hubungi Kami') ?></h2>
+              </div>
               <p>
                 <?php if ($this->session->userdata('current_language') == 'English') { ?>
                   <?php echo $result->deskripsi_kontak_us ?>

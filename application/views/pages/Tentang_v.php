@@ -70,7 +70,7 @@
   <section id="alt-services" class="alt-services">
     <div class="container" data-aos="fade-up">
       <div class="section-headline text-center mb-4">
-        <h2 style="text-decoration: underline;"><?php echo get_phrase('Tentang Kami') ?></h2>
+        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Tentang Kami') ?></h2>
       </div>
       <?php foreach ($tentang->result() as $result) : ?>
         <div class="row justify-content-around gy-4 mt-4">
@@ -81,7 +81,7 @@
           </div>
           <div class="col-lg-5 d-flex flex-column justify-content-center">
             <div class="well-middle">
-              <div class="single-well">
+              <div class="single-well" style="text-align: justify;">
                 <a href="#">
                   <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
                 </a>

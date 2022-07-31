@@ -55,7 +55,7 @@
   <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
     <?php foreach ($slider->result() as $result) : ?>
-      <div class="carousel-item active" style="background-image: url(<?php echo base_url('assets/') ?>img/<?php echo $result->foto_slider ?>)"></div>
+      <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.644)),url(<?php echo base_url('assets/') ?>img/<?php echo $result->foto_slider ?>)"></div>
     <?php endforeach; ?>
 
     <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -78,19 +78,23 @@
       <div class="section-headline text-center mb-4">
         <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Tentang Kami') ?></h2>
       </div>
+
       <?php foreach ($tentang->result() as $result) : ?>
-        <div class="row justify-content-around gy-4 mt-4">
-          <div class="col-lg-6 img-bg">
+
+        <div class="row justify-content-around mt-4">
+          <a href="#">
+            <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
+          </a>
+
+          <div class="img-bg" style="text-align: center;">
             <a href="#">
               <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 400px; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
             </a>
           </div>
-          <div class="col-lg-5 d-flex flex-column justify-content-center">
+
+          <div class=" justify-content-center col-lg-6" >
             <div class="well-middle">
-              <div class="single-well">
-                <a href="#">
-                  <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
-                </a>
+              <div class="single-well" style="text-align: justify;">
                 <p class="justify-content-center">
                   <?php if ($this->session->userdata('current_language') == 'English') { ?>
                     <?php echo substr($result->deskripsi_tentang_en, 0, 1000) . '...' ?>
@@ -102,6 +106,7 @@
               <a href="<?php echo site_url('About-us') ?>" class="btn btn-warning"><?php echo get_phrase('selengkapnya') ?></a>
             </div>
           </div>
+
         </div>
       <?php endforeach; ?>
 
@@ -115,7 +120,7 @@
 
       <div class="section-header">
         <div class="section-headline text-center">
-          <h2 style="text-decoration: underline;"><span><?php echo get_phrase('Galeri Foto') ?></span></h2>
+          <h2 style="text-decoration: underline; text-transform: uppercase;"><span><?php echo get_phrase('Galeri Foto') ?></span></h2>
         </div>
       </div>
 

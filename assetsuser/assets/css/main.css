@@ -1124,6 +1124,7 @@ h2.sec-head{
   background-size: cover;
   background-position: center center;
   min-height: 400px;
+  text-align: center;
 }
 
 .alt-services h3 {
