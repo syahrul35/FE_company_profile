@@ -92,7 +92,7 @@
             </a>
           </div>
 
-          <div class=" justify-content-center col-lg-6" >
+          <div class=" justify-content-center col-lg-6">
             <div class="well-middle">
               <div class="single-well" style="text-align: justify;">
                 <p class="justify-content-center">
@@ -116,6 +116,7 @@
 
   <!-- ======= Our Projects Section ======= -->
   <section id="projects" class="projects">
+
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">

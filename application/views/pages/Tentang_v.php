@@ -74,12 +74,12 @@
       </div>
       <?php foreach ($tentang->result() as $result) : ?>
         <div class="row justify-content-around gy-4 mt-4">
-          <div class="col-lg-6 img-bg">
+          <div class="img-bg">
             <a href="#">
               <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 400px; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
             </a>
           </div>
-          <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
             <div class="well-middle">
               <div class="single-well" style="text-align: justify;">
                 <a href="#">

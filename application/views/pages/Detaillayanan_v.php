@@ -79,7 +79,7 @@
           </a>
         </div>
         <div class="col-lg-5 d-flex flex-column justify-content-center" style="border: 2px wheat solid;">
-          <div class="well-middle">
+          <div class="well-middle m-auto" style="text-align: justify;">
             <div class="single-well">
               <a href="#">
               </a>

@@ -73,7 +73,7 @@
 
     <div class="about-area area-padding-3 mb-4 mt-4">
       <div class="container">
-        <div class="row wow fadeInDown">
+        <div class="row wow fadeInDown mb-4">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-left mb-2" style="text-decoration: underline;">
               <?php if ($this->session->userdata('current_language') == 'English') { ?>
@@ -88,21 +88,18 @@
 
         <?php foreach ($galeri->getPhotoByAlbum($a['id_album'])->result() as $result) : ?>
 
-          <div class="container mb-4 mt-2" data-aos="fade-up">
+          <div class="container mb-4 mt-4" data-aos="fade-up">
 
-            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+            <div class="row gy-4 portfolio-container justify-content-around" data-aos="fade-up" data-aos-delay="200">
 
-              <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-4 portfolio-item filter-remodeling m-auto mb-2 mt-4">
+                <div class="portfolio-content h-100">
+                  <a href="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="glightbox preview-link">
+                    <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="img-fluid" alt="" style="border-radius: 30px;">
+                  </a>
+                </div>
+              </div><!-- End Projects Item -->
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-                  <div class="portfolio-content h-100">
-                    <a href="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="glightbox preview-link">
-                      <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="img-fluid" alt="" style="border-radius: 30px;">
-                    </a>
-                  </div>
-                </div><!-- End Projects Item -->
-
-              </div>
             </div>
           </div>
         <?php endforeach; ?>
