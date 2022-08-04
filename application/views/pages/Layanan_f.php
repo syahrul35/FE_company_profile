@@ -31,7 +31,7 @@
 							if ($field == 'phrase_id' || $field == 'phrase') continue;
 						?>
 							<li>
-								<a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color:black;">
+								<a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color: wheat; font-weight: 400;">
 									<?php echo $field; ?>
 									<?php //selecting current language
 									if ($this->session->userdata('current_language') == $field) : ?>
@@ -82,7 +82,7 @@
 
 						<div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
 							<div class="portfolio-content h-100">
-								<img src="<?php echo base_url('assets/'); ?>img/<?php echo $p['foto_layanan'] ?>" alt="<?php echo $p['nama_layanan'] . ' - ' . $judul . ' - ' . $namaPerusahaan; ?>" alt="<?php echo $namaPerusahaan; ?>" class="img-fluid" alt="">
+								<img src="<?php echo base_url('assets/'); ?>img/<?php echo $p['foto_layanan'] ?>" alt="<?php echo $p['nama_layanan'] . ' - ' . $judul . ' - ' . $namaPerusahaan; ?>" alt="<?php echo $namaPerusahaan; ?>" class="img-fluid" alt="" style="border-radius: 30px;">
 								<div class="portfolio-info">
 									<?php if ($this->session->userdata('current_language') == 'English') { ?>
 										<a href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $p['kategori']) . '/' . str_replace(' ', '-', $p['nama_layanan_en'])) ?>">

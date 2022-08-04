@@ -31,7 +31,7 @@
               if ($field == 'phrase_id' || $field == 'phrase') continue;
             ?>
               <li>
-                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color:black;">
+                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color: wheat; font-weight: 400;">
                   <?php echo $field; ?>
                   <?php //selecting current language
                   if ($this->session->userdata('current_language') == $field) : ?>
@@ -66,74 +66,52 @@
 <main id="main">
   <!-- ======= Our Projects Section ======= -->
   <section id="projects" class="projects">
-    <div class="section-headline text-center mb-4">
-      <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Produk Kami') ?></h2>
-    </div>
+    <div class="container" data-aos="fade-up">
 
-    <?php foreach ($product as $p) : ?>
+      <div class="section-header">
+        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Produk Kami') ?></h2>
+      </div>
 
-      <div class="about-area area-padding-3 mb-4 mt-4">
-        <div class="container">
-          <div class="row wow fadeInDown">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="section-headline text-left mb-2" style="text-decoration: underline;">
-                <?php if ($this->session->userdata('current_language') == 'English') { ?>
-                  <h3><?php echo $p['nama_kategori_en']; ?></h3>
-                <?php } else { ?>
-                  <h3><?php echo $p['nama_kategori']; ?></h3>
-                <?php } ?>
-              </div>
-            </div>
+      <?php foreach ($product as $p) : ?>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+          <div class="section-headline text-left mb-3" style="text-decoration: underline;">
+            <?php if ($this->session->userdata('current_language') == 'English') { ?>
+              <h3><?php echo $p['nama_kategori_en']; ?></h3>
+            <?php } else { ?>
+              <h3><?php echo $p['nama_kategori']; ?></h3>
+            <?php } ?>
           </div>
-
-
-          <?php foreach ($gambar->gambarproduk($p['id_kategori'])->result() as $result) : ?>
-
-            <div class="container mb-4 mt-2" data-aos="fade-up">
-
-              <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-
-                <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200" style="text-transform: uppercase;">
-                  <?php if ($this->session->userdata('current_language') == 'English') { ?>
-                    <a style="text-size: 200px;" href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan_en)) ?>">
-                      <h4"><?php echo $result->nama_layanan_en ?></h4>
-                      <?php } else { ?>
-                        <a href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan)) ?>">
-                          <h4><?php echo $result->nama_layanan ?></h4>
-                        <?php } ?>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-                          <div class="portfolio-content h-100">
-                            <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_layanan ?>" class="img-fluid" alt="" style="border-radius: 30px;">
-                            <div class="portfolio-info" style="text-align: center;">
-                              <?php if ($this->session->userdata('current_language') == 'English') { ?>
-                                <a style="text-size: 200px;" href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan_en)) ?>">
-                                  <h4"><?php echo $result->nama_layanan_en ?></h4>
-                                  <?php } else { ?>
-                                    <a href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan)) ?>">
-                                      <h4><?php echo $result->nama_layanan ?></h4>
-                                    <?php } ?>
-                            </div>
-                          </div>
-                        </div><!-- End Projects Item -->
+          <div class="row gy-4 portfolio-container mt-2" data-aos="fade-up" data-aos-delay="200">
+            <?php foreach ($gambar->gambarproduk($p['id_kategori'])->result() as $result) : ?>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+                <div class="portfolio-content h-100">
+                  <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_layanan ?>" class="img-fluid" alt="" style="border-radius: 30px;">
+                  <div class="portfolio-info">
+                    <?php if ($this->session->userdata('current_language') == 'English') { ?>
+                      <a style="text-size: 200px;" href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan_en)) ?>">
+                        <h4"><?php echo $result->nama_layanan_en ?></h4>
+                        <?php } else { ?>
+                          <a href="<?php echo site_url('Our-Product/' . str_replace(' ', '-', $result->kategori) . '/' . str_replace(' ', '-', $result->nama_layanan)) ?>">
+                            <h4><?php echo $result->nama_layanan ?></h4>
+                          <?php } ?>
+                          <a href="#"></a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          <?php endforeach; ?>
+              </div><!-- End Projects Item -->
+            <?php endforeach; ?>
 
-          <div class="see-more text-center col-12">
+
+          </div><!-- End Projects Container -->
+          <div class="see-more text-center col-12 mt-4 mb-3">
             <?php if ($this->session->userdata('current_language') == 'English') { ?>
               <a href="<?php echo site_url('Our-Products/' . str_replace(' ', '-', $p['nama_kategori_en'])) ?>" class="btn btn-warning"><?php echo get_phrase('Lihat Selengkapnya') ?></a>
             <?php } else { ?>
               <a href="<?php echo site_url('Our-Products/' . str_replace(' ', '-', $p['nama_kategori'])) ?>" class="btn btn-warning"><?php echo get_phrase('Lihat Selengkapnya') ?></a>
             <?php } ?>
           </div>
-
         </div>
-      </div>
-
-    <?php endforeach; ?>
-
+      <?php endforeach; ?>
+    </div>
   </section><!-- End Our Projects Section -->
-
 </main>

@@ -31,7 +31,7 @@
               if ($field == 'phrase_id' || $field == 'phrase') continue;
             ?>
               <li>
-                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color:black;">
+                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color: wheat; font-weight: 400;">
                   <?php echo $field; ?>
                   <?php //selecting current language
                   if ($this->session->userdata('current_language') == $field) : ?>
@@ -54,10 +54,10 @@
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url(<?php echo base_url('assets/') ?>img/82fa28179db1f8b30c60786d1418f120.jpeg);">
   <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-    <h2><?php echo get_phrase('Kontak') ?></h2>
+    <h2><?php echo get_phrase('Hubungi Kami') ?></h2>
     <ol>
       <li><a href="<?php echo site_url('Home') ?>"><?php echo get_phrase('Beranda') ?></a></li>
-      <li><?php echo get_phrase('Kontak') ?></li>
+      <li><?php echo get_phrase('Hubungi Kami') ?></li>
     </ol>
 
   </div>

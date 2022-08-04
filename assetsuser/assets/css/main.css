@@ -500,6 +500,10 @@ h2.sec-head{
     border: 1px solid #222428;
   }
 
+  .navbar .dropdown ul.dropdown-menu a {
+    color: #fff;
+  }
+
   .navbar .dropdown>.dropdown-active,
   .navbar .dropdown .dropdown>.dropdown-active {
     display: block;

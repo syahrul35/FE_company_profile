@@ -31,7 +31,7 @@
               if ($field == 'phrase_id' || $field == 'phrase') continue;
             ?>
               <li>
-                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color:black;">
+                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color: wheat; font-weight: 400;">
                   <?php echo $field; ?>
                   <?php //selecting current language
                   if ($this->session->userdata('current_language') == $field) : ?>
@@ -75,15 +75,15 @@
       <div class="row justify-content-around gy-4 mt-4">
         <div class="col-lg-6 img-bg">
           <a href="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" class="glightbox preview-link">
-            <img src="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" style="width: 400px; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
+            <img src="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" style="width: 400px; margin-top:50px; border-radius: 30px;" alt="<?php echo $namaPerusahaan; ?>">
           </a>
         </div>
-        <div class="col-lg-5 d-flex flex-column justify-content-center" style="border: 2px wheat solid;">
+        <div class="col-lg-5 d-flex flex-column justify-content-center" style="border: 2px wheat solid; border-radius: 30px;">
           <div class="well-middle m-auto" style="text-align: justify;">
             <div class="single-well">
               <a href="#">
               </a>
-              <p text-align="justify">
+              <p text-align="justify p-3">
                 <?php if ($this->session->userdata('current_language') == 'English') { ?>
                   <?php echo $detail->deskripsi_layanan_en ?>
                 <?php } else { ?>

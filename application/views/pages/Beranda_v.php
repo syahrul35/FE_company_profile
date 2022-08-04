@@ -31,7 +31,7 @@
               if ($field == 'phrase_id' || $field == 'phrase') continue;
             ?>
               <li>
-                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color:black;">
+                <a href="<?php echo base_url(); ?>Multilanguage/select_language/<?php echo $field; ?>" style="color: wheat; font-weight: 400;">
                   <?php echo $field; ?>
                   <?php //selecting current language
                   if ($this->session->userdata('current_language') == $field) : ?>
