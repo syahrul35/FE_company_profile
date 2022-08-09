@@ -65,41 +65,41 @@
     </div>
   </div><!-- End Breadcrumbs -->
 
-<main id="main">
-  <!-- ======= Alt Services Section ======= -->
-  <section id="alt-services" class="alt-services">
-    <div class="container" data-aos="fade-up">
-      <div class="section-headline text-center mb-4">
-        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Tentang Kami') ?></h2>
-      </div>
-      <?php foreach ($tentang->result() as $result) : ?>
-        <div class="row justify-content-around gy-4 mt-4">
-          <div class="img-bg">
-            <a href="#">
-              <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 400px; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
-            </a>
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <div class="well-middle">
-              <div class="single-well" style="text-align: justify;">
-                <a href="#">
-                  <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
-                </a>
-                <p class="justify-content-center p-3">
-                  <?php if ($this->session->userdata('current_language') == 'English') { ?>
-                    <?php echo $result->deskripsi_tentang_en ?>
-                  <?php } else { ?>
-                    <?php echo $result->deskripsi_tentang ?>
-                  <?php } ?>
-                </p>
+  <main id="main">
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-headline text-center mb-4">
+          <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Tentang Kami') ?></h2>
+        </div>
+        <?php foreach ($tentang->result() as $result) : ?>
+          <div class="row justify-content-around gy-4 mt-4">
+            <div class="img-bg" style="min-height: 0;">
+              <a href="#">
+                <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 50%; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
+              </a>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center m-4">
+              <div class="well-middle">
+                <div class="single-well" style="text-align: justify;">
+                  <a href="#">
+                    <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
+                  </a>
+                  <p class="justify-content-center p-3">
+                    <?php if ($this->session->userdata('current_language') == 'English') { ?>
+                      <?php echo $result->deskripsi_tentang_en ?>
+                    <?php } else { ?>
+                      <?php echo $result->deskripsi_tentang ?>
+                    <?php } ?>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
 
-    </div>
+      </div>
 
-  </section><!-- End Alt Services Section -->
+    </section><!-- End Alt Services Section -->
 
-</main><!-- End #main -->
+  </main><!-- End #main -->

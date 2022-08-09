@@ -63,57 +63,47 @@
   </div>
 </div><!-- End Breadcrumbs -->
 
-<!-- ======= Our Projects Section ======= -->
-<section id="projects" class="projects">
-  <div class="section-headline text-center mb-4">
-    <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Galeri Foto') ?></h2>
-  </div>
+<!-- main -->
+<main>
+  <!-- ======= Our Projects Section ======= -->
+  <section id="projects" class="projects">
+    <div class="container" data-aos="fade-up">
 
-  <?php foreach ($album as $a) : ?>
+      <div class="section-headline text-center mb-4">
+        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Galeri Foto') ?></h2>
+      </div>
 
-    <div class="about-area area-padding-3 mb-4 mt-4">
-      <div class="container">
-        <div class="row wow fadeInDown mb-4">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="section-headline text-left mb-2" style="text-decoration: underline;">
-              <?php if ($this->session->userdata('current_language') == 'English') { ?>
-                <h3><?php echo $a['nama_album_en']; ?></h3>
-              <?php } else { ?>
-                <h3><?php echo $a['nama_album']; ?></h3>
-              <?php } ?>
-            </div>
-          </div>
-        </div>
+      <?php foreach ($album as $a) : ?>
+        <div class="portfolio-isotope mb-4" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+          <?php if ($this->session->userdata('current_language') == 'English') { ?>
+            <h3><?php echo $a['nama_album_en']; ?></h3>
+          <?php } else { ?>
+            <h3><?php echo $a['nama_album']; ?></h3>
+          <?php } ?>
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <?php foreach ($galeri->getPhotoByAlbum($a['id_album'])->result() as $result) : ?>
 
-
-        <?php foreach ($galeri->getPhotoByAlbum($a['id_album'])->result() as $result) : ?>
-
-          <div class="container mb-4 mt-4" data-aos="fade-up">
-
-            <div class="row gy-4 portfolio-container justify-content-around" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="col-lg-4 portfolio-item filter-remodeling m-auto mb-2 mt-4">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
                 <div class="portfolio-content h-100">
                   <a href="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="glightbox preview-link">
                     <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_galeri ?>" class="img-fluid" alt="" style="border-radius: 30px;">
                   </a>
                 </div>
               </div><!-- End Projects Item -->
+            <?php endforeach; ?>
+          </div><!-- End Projects Container -->
 
-            </div>
-          </div>
-        <?php endforeach; ?>
-
-        <div class="see-more text-center col-12">
+        </div>
+        <div class="see-more text-center col-12 mt-4 mb-4">
           <?php if ($this->session->userdata('current_language') == 'English') { ?>
             <a href="<?php echo site_url('Photo-Gallery/' . str_replace(' ', '-', $a['nama_album_en'])) ?>" class="btn btn-warning"><?php echo get_phrase('Lihat Selengkapnya') ?></a>
           <?php } else { ?>
             <a href="<?php echo site_url('Photo-Gallery/' . str_replace(' ', '-', $a['nama_album'])) ?>" class="btn btn-warning"><?php echo get_phrase('Lihat Selengkapnya') ?></a>
           <?php } ?>
         </div>
-      </div>
+      <?php endforeach; ?>
+
     </div>
-
-  <?php endforeach; ?>
-
-</section><!-- End Our Projects Section -->
+  </section><!-- End Our Projects Section -->
+</main>
+<!-- end main -->

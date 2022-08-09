@@ -86,9 +86,9 @@
             <h2 class="sec-head"><span><?php echo $result->nama_tentang ?></span></h2><br><br>
           </a>
 
-          <div class="img-bg" style="text-align: center;">
+          <div class="img-bg projects" style="text-align: center; min-height: 0;">
             <a href="#">
-              <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 400px; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
+              <img src="<?php echo base_url('assets/'); ?>img/<?php echo $result->foto_tentang ?>" style="width: 50%; margin-top:50px;" alt="<?php echo $namaPerusahaan; ?>">
             </a>
           </div>
 
@@ -119,10 +119,8 @@
 
     <div class="container" data-aos="fade-up">
 
-      <div class="section-header">
-        <div class="section-headline text-center">
-          <h2 style="text-decoration: underline; text-transform: uppercase;"><span><?php echo get_phrase('Galeri Foto') ?></span></h2>
-        </div>
+      <div class="section-headline text-center mb-4">
+        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Galeri Foto') ?></h2>
       </div>
 
       <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">

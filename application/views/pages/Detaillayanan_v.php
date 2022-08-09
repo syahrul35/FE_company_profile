@@ -73,13 +73,13 @@
       </div>
 
       <div class="row justify-content-around gy-4 mt-4">
-        <div class="col-lg-6 img-bg">
+        <div class="col-lg-6 img-bg" style="min-height: 0;">
           <a href="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" class="glightbox preview-link">
-            <img src="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" style="width: 400px; margin-top:50px; border-radius: 30px;" alt="<?php echo $namaPerusahaan; ?>">
+            <img src="<?php echo base_url('assets/'); ?>img/<?php echo $detail->foto_layanan ?>" style="width: 70%; margin-top:3em; border-radius: 30px;" alt="<?php echo $namaPerusahaan; ?>">
           </a>
         </div>
-        <div class="col-lg-5 d-flex flex-column justify-content-center" style="border: 2px wheat solid; border-radius: 30px;">
-          <div class="well-middle m-auto" style="text-align: justify;">
+        <div class="col-lg-5 d-flex flex-column justify-content-center" style="border: 2px wheat solid; border-radius: 30px; width: 80%;">
+          <div class="well-middle m-auto" style="text-align: justify; width: 80%; padding: 20px;">
             <div class="single-well">
               <a href="#">
               </a>

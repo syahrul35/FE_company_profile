@@ -67,9 +67,8 @@
   <!-- ======= Our Projects Section ======= -->
   <section id="projects" class="projects">
     <div class="container" data-aos="fade-up">
-
-      <div class="section-header">
-        <h2 style="text-decoration: underline; text-transform: uppercase;"><?php echo get_phrase('Produk Kami') ?></h2>
+      <div class="section-headline text-center mb-4">
+        <h2 style="text-decoration: underline; text-transform: uppercase;"> <?php echo get_phrase('Produk Kami') ?></h2>
       </div>
 
       <?php foreach ($product as $p) : ?>
