@@ -95,7 +95,17 @@
         </div>
       </div>
 
-
+      <div class="order d-flex flex-colomn justify-content-center mt-2">
+        <div class="well-middle m-auto">
+          <div class="single-well">
+            <?php if ($this->session->userdata('current_language') == 'English') { ?>
+              <a href="https://api.whatsapp.com/send?phone=6285806377713&text=Hello, I want to buy <?php echo str_replace('-', ' ', $nama) ?>" class="btn btn-success"><?php echo get_phrase('Pesan Disini') ?></a>
+            <?php } else { ?>
+              <a href="https://api.whatsapp.com/send?phone=6285806377713&text=Halo, saya mau membeli <?php echo str_replace('-', ' ', $nama) ?>" class="btn btn-success"><?php echo get_phrase('Pesan Disini') ?></a>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
     </div>
 
   </section><!-- End Alt Services Section -->
